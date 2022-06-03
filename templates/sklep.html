@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;700&family=Lato:wght@100;400;700&family=Poppins:wght@100;400;700&display=swap" rel="stylesheet"> 
+</head>
+<body >
+    <nav id="navbar">
+
+    </nav>
+    <!-- Rozwijajacy sie koszyk -->
+    <div style="margin-top: 120px;">
+        <div class="drop-element">
+            <div id = "koszyk" class="drop-content">
+                <div id="koszyk"></div>
+                <div>
+                    <button style="width: 100%" id="payButton">Zapłać <span id="totalPrice">0</span>$</button>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Nazwa uzytkownika -->
+        <span id = "username"></span>
+        
+        <!-- Pasek szukania i kontener z grami -->
+        <section id="sklep">
+        <div class="search-container">
+            <input type="text" id = "szukanaFraza" class="search-input">
+            <button id = "szukaj">Szukaj</button>
+        </div>
+       
+        <div id = "gry" class="games-container">
+            <div class="loader"></div>
+        </div>
+        </section>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../static/scripts.js"></script>
+    <script src="../static/common.js"></script>
+</body>
+</html>

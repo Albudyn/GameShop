@@ -1,0 +1,294 @@
+:root { /* glowny element, tworzymy zmiennej ktore odnosnie kolorow i czcionek ktore beda wykorzystywane w innych elementach */
+    --color1 : #222831;
+    --color2 : #393E46;
+    --color3 : #00ADB5;
+    --color4 : #EEEEEE;
+
+    --color3-hover: #018086;
+    --color2-hover : #62656b;
+    --color-fail: rgb(170, 0, 0);
+
+    --main-font: 'Josefin Sans', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body { /* dotyczy calej strony */
+    font-family: var(--main-font);
+    background-color: var(--color2);
+    height: 100%;
+}
+
+a { /* a - dotyczy hiperlacza */
+    color: var(--color4)
+}
+
+button{
+    color: var(--color4); /* kolor czcionki*/
+
+    transition: background-color .2s; /* czas zmiany koloru w przypadku najechania myszka */
+    background-color: var(--color3);
+
+
+    font-size: 14px;
+    font-family: var(--main-font);
+    border: 0; /* brak obramowania*/
+    border-radius: 4px; /* zaokraglenie rogow*/
+    letter-spacing: 2px; /*odleglosc miedzy literkami*/
+
+    
+    height: 45px; /*wysokosc przycisku*/
+    text-transform: uppercase; /* duze literki*/
+    cursor: pointer; /* zamienia kursor na raczke jesli najedziemy na ten przycisk*/
+}
+
+button:hover { /* styl przycisku po najechaniu*/
+    background-color: var(--color3-hover);
+}
+
+input{
+    background-color: var(--color2);
+    color: var(--color4); /* kolor czcionki*/
+    width: 100%; /* szerokosc ma byc taka jak elementu w ktorym znajduje sie ten input*/
+    border-radius: 5px; /* zaokraglenie rogow*/
+    border-style: none; /* usuwamy domyslne obramowanie */
+    padding: 8px; /* odstep elemenow wewnatrz inputu od jego krawedzi */
+    box-sizing: border-box; /* blokuje mozliwosc powiekszenia sie inputa w momencie ustawienia paddingu, 
+    trzyma wysokosc zadana ponizej*/
+    height: 45px;
+    font-size: medium;
+    font-family: var(--main-font);
+}
+
+input:hover { /* najechanie na input myszka*/
+    border: 2px solid var(--color2-hover); /* ustaw ramke 2px*/
+}
+
+input:focus { /* po kliknieciu w input*/
+    font-weight: bold; /* pogrub czcionke */
+}
+
+.form-control /* szerokosc elementow w formularzach logowania i rejestracji*/
+{
+    width: 100%;
+}
+
+.flex-container {
+    height: 100%; /* dostosuj sie wysokoscia do elementu rodzica */
+    width: 100%; /* dostosuj sie szerokosci do elementu rodzica */
+    display: flex; /* uklad elementow typu flex*/
+    align-items: center; /* srodkuje elementy w pionie*/
+    justify-content: center; /* srodkuje elemnety w poziomie*/
+}
+
+.container {
+    color: var(--color4);
+    border: 2px solid var(--color1); /* ramka linia ciagla o dlugosci 2px*/
+    background-color: var(--color1);
+    border-radius: 15px; /* zaokraglenie bokow ramki */
+    padding: 30px;
+    width: 350px;
+}
+
+.register-text {
+    margin-top: 40px; /* odstep od gory */
+    text-align: center; /* wysrodkuj tekst */
+}
+
+.text-danger {
+    color: var(--color-fail);
+    margin-top: 5px;
+    padding-left: 8px;
+    font-weight: bold; /* pogrubienie tekstu */
+    font-family: var(--main-font); /* ustawienie czcionki */
+}
+
+.menu-item {
+    background-color: var(--color1);
+    border: solid 3px var(--color3);
+    border-radius: 50px;
+    padding: 12px;
+    margin-left: 15px;
+    text-decoration: none; /* usuwa dodatkowe parametry tekstu np interlinie*/
+    letter-spacing: 2px; 
+    text-transform: uppercase; /* zamienia tekst na duze literki */
+}
+
+.menu-item:hover {
+    background-color: var(--color3);
+}
+
+nav {
+    position: fixed; /* menu jest zawsze na gorze */
+    top: 0; /* pozycja pionowa elementu */
+    left: 0; /* pozycja pozioma */
+    width: 100%; /* szerokosc na cala strone (lub kontener w ktorym sie znajduje nav) */
+}
+
+.center-nav {
+    display: flex; /* rozklad elementow kolumnowo lub wierszowo */
+    flex-direction: row; /* sposob ukladania elementow - wierszami */
+    justify-content: center; /* centruje elementy w poziomie */
+    background-color: var(--color1);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+img {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.drop-element {
+    width: 100%;
+}
+
+.drop-content {
+    padding: 15px;
+    display: none; /* element ukryty */
+    position: fixed; /* pozycja jest ustalana niezalenie od elementow na stronie */
+    top: 85px; /* pozycja Y elementu na stronie */
+    width: 98%;
+    background-color: var(--color4);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* cien pod elementem */
+    border-radius: 10px;
+}
+
+.rounded-button {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.games-container {
+    display: flex; /* rozklad elementow kolumnowo lub wierszowo */
+    flex-direction: row;  /* sposob ukladania elementow - wierszami */
+    flex-wrap: wrap; /* przenosi elementy ktore sie nie mieszcza (zeby nie byly w jednej linii) */
+    justify-content: center; /* centruje elementy w poziomie */
+    row-gap: 15px; /* odstep miedzy elementami w kolumnie */
+    column-gap: 15px; /* odstep miedzy elementami w wierszu */
+}
+
+.shop-item {
+    background-color: var(--color1);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: var(--color4);
+    padding: 15px;
+    width: 200px;
+
+    text-overflow: ellipsis; /* jesli tekst sie nie miesci to dodaj ... */
+    white-space: nowrap; /* nie przenos tekstu do nowej linni jesli sie nie miesci*/
+    overflow: hidden; /* schowaj litery ktore wystaja poza div */
+
+    display: flex;  /* rozklad elementow kolumnowo lub wierszowo */
+    flex-direction: column; /* sposob ukladania elementow - kolumnami */
+    justify-content: center; /* wycentruj elementy */
+}
+
+.search-container {
+    display: flex; 
+    justify-content: center; /* wycentruj elementy w wierszu */
+    align-items: center; /* wycentruj elementy w kolumnie */
+    margin: 15px;
+    gap: 7px; /* odstep od innych elementow we flexie */
+    height: 60px;
+}
+
+.search-input {
+    width: 300px;
+    background-color: #222831;
+    border-color: var(--color4);
+    border: solid 1px;
+}
+
+#username {
+    position: fixed; /* nazwa uzytkownika jest zawsze w tym samym miejscu na navbarze */
+    top: 30px; /* pozycja X */
+    left: 30px; /* pozycja Y */
+    color: var(--color4);
+}
+
+#noResult {
+    color: var(--color4);
+    display: flex;
+    flex-direction: column; /* elementy sa pod soba */
+    align-items: center; /* wysrodkuj elementy */
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.koszyk-zamowienie {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    padding: 20px;
+    background-color: var(--color1);
+    color: var(--color4);
+    border-radius: 15px;
+    margin-left: 15px;
+}
+
+.zamowienie-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 90px;
+}
+
+.basket-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* centruje elementy i dodaje proprocjonalnie odstep */
+}
+
+.zamowienie-adres {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--color1);
+    color: var(--color4);
+    border-radius: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.form-item {
+    padding: 5px;
+}
+
+.center-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color4);
+    letter-spacing: 2px;
+}
+
+.loader {
+    /* dwa boki na bialo i dwa na niebiesko */
+    border: 10px solid var(--color4); 
+    border-top: 10px solid var(--color3); 
+    border-bottom: 10px solid var(--color3); 
+    border-radius: 50%; /* wysoki radius zeby element byl kolem */
+    width: 60px;
+    height: 60px;
+    animation: spin 0.5s linear infinite; /* animacja - obrot elementu, szybkosc liniowa, w nieskonczonosc */
+
+    position: absolute; /* ustaw element wzgledem rodzica na podstawie top i left */
+    top: 50%; /* pozycja Y */
+    left: 47%; /* pozycja X */
+    transform: translate(-50%, -50%); /* trzyma element na srodku */
+  }
+  
+@keyframes spin { /* okreslone kroki animacji - rotacja od 0% do 360% */
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

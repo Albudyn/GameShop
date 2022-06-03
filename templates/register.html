@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;700&family=Lato:wght@100;400;700&family=Poppins:wght@100;400;700&display=swap" rel="stylesheet"> 
+    <style>
+        .form-header {
+            text-align: center; 
+            margin-bottom: 25px
+        }
+        #rejestruj {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body >
+    <nav id="navbar">
+
+    </nav>
+<!-- Formularz rejestracji -->
+<div class="flex-container">
+    <div class="container">
+        <h1 class="form-header">Rejestracja</h1>
+        <input class="form-control" type="text" id = "login" placeholder="login">
+        <p id="loginError" class="text-danger"></p>
+        <input class="form-control" type="password" id = "haslo1" placeholder="hasło">
+        <p id="passwordError" class="text-danger"></p>
+        <input class="form-control" type="password" id = "haslo2" placeholder="powtórz hasło">
+        <button id = "rejestruj" class="form-control">Zarejestruj</button>
+        <p class="register-text">Masz już konto? <a href="login.html">Zaloguj się</a></p>
+    </div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../static/register.js"></script>
+<script src="../static/common.js"></script>
+</body>
+</html>
